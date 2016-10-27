@@ -1,18 +1,14 @@
 package Module2.Task2_1;
 
-/**
- * Created by oops! on 10/25/2016.
- */
 public class Main {
     public static void main(String[] args) {
         int[] ints = {-13, 52, 33, -74, 50, 46, 77, -86, 39, 10};
-        int[] negativeInts = {-13, -52, -33, -74, -50, -46, -77, -86, -39, -10};
+        int[] negativeInts = {-13, -52, -33, -74, -50, -46, -77, -86, -39, -10}; //created for testing purposes
         double[] doubles = {-21.2, 24.2, -36.3, 74.5, -85.5, 66.6, 47.7, -98.8, 49.9, 10.1};
-        double[] negativeDoubles = {-21.2, -24.2, -36.3, -74.5, -85.5, -66.6, -47.7, -98.8, -49.9, -10.1};
+        double[] negativeDoubles = {-21.2, -24.2, -36.3, -74.5, -85.5, -66.6, -47.7, -98.8, -49.9, -10.1}; //created for testing purposes
 
         System.out.println("Length of ints array is " + ints.length);
         System.out.println("Lenght of doubles array is " + doubles.length);
-
         System.out.println("Sum of ints is: " + sum(ints));
         System.out.println("Sum of doubles is: " + sum(doubles));
         System.out.println("Min value from array of integers is: " + min(ints));
@@ -25,15 +21,8 @@ public class Main {
         maxPositive(negativeDoubles);
         System.out.println("Multiplication of all values from ints array equals to: " + multiplication(ints));
         System.out.println("Multiplication of all values from doubles array equals to: " + multiplication(doubles));
-
-        System.out.println("Result of modulus(ints):");
-        for (int i = 0; i < modulus(ints).length; i++) {
-            System.out.println(modulus(ints)[i]);
-        }
-        System.out.println("Result of modulus(doubles):");
-        for (int i = 0; i < modulus(doubles).length; i++) {
-            System.out.println(modulus(doubles)[i]);
-        }
+        System.out.println("Modulus for ints array equals to: " + modulus(ints));
+        System.out.println("Modulus for doubles array equals to: " + modulus(doubles));
         System.out.println("Second largest from array of ints equals to: " + secondLargest(ints));
         System.out.println("Second largest from array of doubles equals to: " + secondLargest(doubles));
         System.out.println("Second largest from array of negative ints equals to: " + secondLargest(negativeInts));
@@ -142,28 +131,12 @@ public class Main {
         return result;
     }
 
-    public static int[] modulus(int array[]) {
-        int[] result = new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] >= 0) {
-                result[i] = array[i];
-            } else {
-                result[i] = array[i] * (-1);
-            }
-        }
-        return result;
+    public static int modulus(int array[]) {
+        return array[0] % array[array.length - 1];
     }
 
-    public static double[] modulus(double array[]) {
-        double[] result = new double[array.length];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] >= 0) {
-                result[i] = array[i];
-            } else {
-                result[i] = array[i] * (-1);
-            }
-        }
-        return result;
+    public static double modulus(double array[]) {
+        return array[0] % array[array.length - 1];
     }
 
     public static int secondLargest(int array[]) {
