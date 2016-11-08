@@ -7,10 +7,9 @@ public class Main {
         String song3 = "I am singing";
         String song4 = "I am Bird";
 
-        Bird bird = new Bird("Parrot", 1);
-        bird.sing(song1);
-        bird.sing(song2);
-        bird.sing(song3);
-        bird.sing(song4);
+        Bird.sing(song1);
+        Bird.sing(song2);
+        Bird.sing(song3);
+        Bird.sing(song4);
     }
 }
