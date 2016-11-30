@@ -6,26 +6,26 @@ import java.util.Date;
 
 public class TripAdvisorAPI implements API {
     public Room[] rooms = new Room[]{
-            new Room(1, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(2, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(3, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(4, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(5, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(6, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(7, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(8, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(9, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(10, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(11, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(12, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(13, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(14, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(15, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(16, 250, 4, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(17, 250, 4, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(18, 250, 4, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(19, 250, 4, new Date(20161111), "Dnipro", "Kyiv"),
-            new Room(20, 250, 4, new Date(20161111), "Dnipro", "Kyiv")
+            new Room(41, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(42, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(43, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(44, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(45, 100, 1, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(46, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(47, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(48, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(49, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(50, 150, 2, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(51, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(52, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(53, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(54, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(55, 200, 3, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(56, 250, 4, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(57, 250, 4, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(58, 250, 4, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(59, 250, 4, new Date(20161111), "Dnipro", "Kyiv"),
+            new Room(60, 250, 4, new Date(20161111), "Dnipro", "Kyiv")
     };
 
     @Override
@@ -42,5 +42,10 @@ public class TripAdvisorAPI implements API {
             }
         }
         return findRooms;
+    }
+
+    @Override
+    public Room[] getAll() {
+        return rooms;
     }
 }

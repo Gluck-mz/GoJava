@@ -6,26 +6,27 @@ import java.util.Date;
 
 public class GoogleAPI implements API {
     public Room[] rooms = new Room[]{
-            new Room(1, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(2, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(3, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(4, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(5, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(6, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(7, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(8, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(9, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(10, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(11, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(12, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(13, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(14, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(15, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(16, 250, 4, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(17, 250, 4, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(18, 250, 4, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(19, 250, 4, new Date(20161111), "Ibis", "Warsaw"),
-            new Room(20, 250, 4, new Date(20161111), "Ibis", "Warsaw")
+            new Room(21, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(22, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(23, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(24, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(25, 100, 1, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(26, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(27, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(28, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(29, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(30, 150, 2, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(31, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(32, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(33, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(34, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(35, 200, 3, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(36, 250, 4, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(37, 250, 4, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(38, 250, 4, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(39, 250, 4, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(40, 250, 4, new Date(20161111), "Ibis", "Warsaw"),
+            new Room(41, 250, 4, new Date(20161111), "Royal", "Berlin")
     };
 
     @Override
@@ -42,5 +43,10 @@ public class GoogleAPI implements API {
             }
         }
         return findRooms;
+    }
+
+    @Override
+    public Room[] getAll() {
+        return rooms;
     }
 }
