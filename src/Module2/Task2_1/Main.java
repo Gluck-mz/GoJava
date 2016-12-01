@@ -14,8 +14,8 @@ public class Main {
         System.out.println("Sum of ints is: " + ArraysUtils.sum(ints));
         System.out.println("Min value from array of integers is: " + ArraysUtils.min(ints));
         System.out.println("Max value from array of integers is: " + ArraysUtils.max(ints));
-        ArraysUtils.maxPositive(ints);
         ArraysUtils.maxPositive(negativeInts);
+        ArraysUtils.maxPositive(ints);
         System.out.println("Multiplication of all values from ints array equals to: " + ArraysUtils.multiplication(ints));
         System.out.println("Modulus for ints array equals to: " + ArraysUtils.modulus(ints));
         System.out.println("Second largest from array of ints equals to: " + ArraysUtils.secondLargest(ints));
