@@ -33,10 +33,7 @@ public class GoogleAPI implements API {
     public Room[] findRooms(int price, int persons, String city, String hotel) {
         Room[] findRooms = new Room[rooms.length];
         for (int i = 0; i < rooms.length; i++) {
-            if (price == rooms[i].getPrice() &&
-                    persons == rooms[i].getPersons() &&
-                    city.equalsIgnoreCase(rooms[i].getCityName()) &&
-                    hotel.equalsIgnoreCase(rooms[i].getHotelName())) {
+            if (rooms[i].equals(new Room(-1, price, persons, null, hotel, city))) {
                 findRooms[i] = rooms[i];
             } else {
                 findRooms[i] = null;
