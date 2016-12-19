@@ -80,11 +80,24 @@ public final class ArraysUtils {
         return array;
     }
 
+    //checks if specified number is present in array list
+    public static boolean checkNum(int[] array, int num) {
+        for (int i : array) {
+            if (i == num) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
+    }
+
     public static int[] findEvenElements(int[] array) {
         int[] result = new int[array.length];
         for (int i = 0; i < array.length; i ++) {
             for (int j = i + 1; j < array.length; j++) {
-                if (array[i] == array[j]) {
+                if (array[i] == array[j] &&
+                        !checkNum(result, array[i])) {  //this check is added in order to avoid duplication in returned array list (case when some number is present 3 or more times)
                     result[i] = array[i];
                 }
             }
