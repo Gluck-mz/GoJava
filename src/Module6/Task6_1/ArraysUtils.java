@@ -1,6 +1,7 @@
 package Module6.Task6_1;
 
 public final class ArraysUtils {
+
     public static int sum(int array[]) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
@@ -79,14 +80,16 @@ public final class ArraysUtils {
         return array;
     }
 
-    public static void findEvenElements(int[] array) {
+    public static int[] findEvenElements(int[] array) {
+        int[] result = new int[array.length];
         for (int i = 0; i < array.length; i ++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] == array[j]) {
-                    System.out.println(array[i]);
+                    result[i] = array[i];
                 }
             }
         }
+        return result;
     }
 
     public static void printOut(int[] array) {
@@ -94,4 +97,7 @@ public final class ArraysUtils {
             System.out.println(i);
         }
     }
+
+    //final default constructor
+    private ArraysUtils() {}
 }
