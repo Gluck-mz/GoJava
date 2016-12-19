@@ -4,22 +4,23 @@ import Module6.Task6_1.ArraysUtils;
 
 public class Main {
     public static void main(String[] args) {
-        int[] ints = {-13, 52, 33, -74, 50, -13, 46, -74, 77, -86, 39, 10};
+        int[] ints = {-13, 52, 33, -74, 50, -13, 46, -74, 77, -86, 39, 10, -13};
         int[] negativeInts = {-13, -52, -33, -74, -50, -46, -77, -86, -39, -10}; //created for testing purposes
         double[] doubles = {-21.2, 24.2, -36.3, 74.5, -85.5, 66.6, 47.7, -98.8, 49.9, 10.1};
         double[] negativeDoubles = {-21.2, -24.2, -36.3, -74.5, -85.5, -66.6, -47.7, -98.8, -49.9, -10.1}; //created for testing purposes
 
 //        ArraysUtils.printOut(ArraysUtils.reverse(ints));
 //        ArraysUtils.findEvenElements(ints);
-        System.out.println("Sum of ints is: " + ArraysUtils.sum(ints));
-        System.out.println("Min value from array of integers is: " + ArraysUtils.min(ints));
-        System.out.println("Max value from array of integers is: " + ArraysUtils.max(ints));
-        ArraysUtils.maxPositive(negativeInts);
-        ArraysUtils.maxPositive(ints);
-        System.out.println("Multiplication of all values from ints array equals to: " + ArraysUtils.multiplication(ints));
-        System.out.println("Modulus for ints array equals to: " + ArraysUtils.modulus(ints));
-        System.out.println("Second largest from array of ints equals to: " + ArraysUtils.secondLargest(ints));
-        System.out.println("Second largest from array of negative ints equals to: " + ArraysUtils.secondLargest(negativeInts));
+        ArraysUtils.printOut(ArraysUtils.findEvenElements(ints));
+//        System.out.println("Sum of ints is: " + ArraysUtils.sum(ints));
+//        System.out.println("Min value from array of integers is: " + ArraysUtils.min(ints));
+//        System.out.println("Max value from array of integers is: " + ArraysUtils.max(ints));
+//        ArraysUtils.maxPositive(negativeInts);
+//        ArraysUtils.maxPositive(ints);
+//        System.out.println("Multiplication of all values from ints array equals to: " + ArraysUtils.multiplication(ints));
+//        System.out.println("Modulus for ints array equals to: " + ArraysUtils.modulus(ints));
+//        System.out.println("Second largest from array of ints equals to: " + ArraysUtils.secondLargest(ints));
+//        System.out.println("Second largest from array of negative ints equals to: " + ArraysUtils.secondLargest(negativeInts));
     }
 
     public static void hw2(int[] ints, int[] negativeInts, double[] doubles, double[] negativeDoubles) {
