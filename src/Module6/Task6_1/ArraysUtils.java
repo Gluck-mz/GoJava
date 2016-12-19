@@ -98,6 +98,6 @@ public final class ArraysUtils {
         }
     }
 
-    //final default constructor
+    //private empty constructor
     private ArraysUtils() {}
 }
