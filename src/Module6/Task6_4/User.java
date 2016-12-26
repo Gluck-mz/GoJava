@@ -20,20 +20,36 @@ public class User {
         if (obj == null) {
             return false;
         }
-        if (obj == this) {
+        if (this == obj) {
             return true;
         }
-        if (obj.getClass() == this.getClass()) {
-            User user = (User) obj;
-            if (user.getId() == this.getId() &&
-                    user.getFirstName().equalsIgnoreCase(this.getFirstName()) &&
-                    user.getLastName().equalsIgnoreCase(this.getLastName()) &&
-                    user.getSalary() == this.getSalary() &&
-                    user.getBalance() == this.getBalance()) {
-                return true;
-            }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        User user = (User) obj;
+        if (user.getId() == id &&
+                user.getFirstName().equalsIgnoreCase(firstName) &&
+                user.getLastName().equalsIgnoreCase(lastName) &&
+                user.getSalary() == salary &&
+                user.getBalance() == balance) {
+            return true;
         }
         return false;
+    }
+
+    @Override
+    public int hashCode() throws NullPointerException{
+        try {
+            int result = (int) (id ^ (id >>> 32));
+            result = 31 * result + firstName.hashCode();
+            result = 31 * result + lastName.hashCode();
+            result = 31 * result + salary;
+            result = 31 * result + balance;
+            return result;
+        } catch (NullPointerException e) {
+            System.out.println("Warning: User with id = " + id + " has first name or last name equal to null");
+        }
+        return -1;
     }
 
     public long getId() {
