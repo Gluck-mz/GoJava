@@ -6,6 +6,9 @@ import Module5.Task5_4.BookingComAPI;
 import Module5.Task5_4.GoogleAPI;
 import Module5.Task5_4.TripAdvisorAPI;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Controller {
     private BookingComAPI bookingComAPI = new BookingComAPI();
     private GoogleAPI googleAPI = new GoogleAPI();
@@ -13,7 +16,7 @@ public class Controller {
 
     public API[] apis = {bookingComAPI, googleAPI, tripAdvisorAPI};
 
-    public Room[] requestRooms(int price, int persons, String city, String hotel) {
+    public List<Room> requestRooms(int price, int persons, String city, String hotel) {
         for (int i = 0; i < apis.length; i++) {
             return apis[i].findRooms(price, persons, city, hotel);
         }
@@ -21,18 +24,16 @@ public class Controller {
         return null;
     }
 
-    public Room[] check(API api1, API api2) {
-        Room[] result = new Room[api1.getAll().length];
-        Room[] rooms1 = api1.getAll();
-        Room[] rooms2 = api2.getAll();
+    public List<Room> check(API api1, API api2) {
+        List<Room> result = new ArrayList<>();
+        List<Room> rooms1 = api1.getAll();
+        List<Room> rooms2 = api2.getAll();
 
-        for (int i = 0; i < rooms1.length; i++) {
-            for (int j = 0; j < rooms2.length; j++) {
-                if (rooms2[j].equals(rooms1[i])) {
-                    result[i] = rooms1[i];
+        for (int i = 0; i < rooms1.size(); i++) {
+            for (int j = 0; j < rooms2.size(); j++) {
+                if (rooms2.get(j).equals(rooms1.get(i))) {
+                    result.add(rooms1.get(i));
                     break;
-                } else {
-                    result[i] = null;
                 }
             }
         }
